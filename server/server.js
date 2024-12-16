@@ -1,12 +1,12 @@
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose'); // Import Mongoose
+const mongoose = require('mongoose'); 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 
-const dbURI = 'mongodb://localhost:27017/coursesDB'; // Replace with your MongoDB URI
+const dbURI = 'mongodb://localhost:27017/coursesDB'; 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("Connected to MongoDB"))
     .catch(err => console.error("Failed to connect to MongoDB", err));
